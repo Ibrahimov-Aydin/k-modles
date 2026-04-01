@@ -19,6 +19,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 
 
@@ -660,39 +661,61 @@
 						</div>
 					</div>
 					<div class="interior__wrapper">
-						<div data-da=".interior__footer-block, 991.98, first" class="interior__navigation-image">
-							<img src="images/inter/left-icon.png" alt="image">
-						</div>
+						<button data-da=".interior__footer-block, 991.98, first" class="interior__navigation-image interior__nav interior__nav_prev" type="button" aria-label="Предыдущий интерьер">
+							<img src="images/inter/left-icon.png" alt="">
+						</button>
 						<div class="interior__bottom">
-							<div class="interior__compare" data-compare-slider style="--compare-position: 50%;">
-								<div class="interior__layer interior__layer_base">
-									<img class="interior__bg" src="images/inter/02.webp" alt="Наша студия">
-									<h3 class="interior__label interior__label_right">Наша</h3>
-									<img class="interior__decor interior__decor_right" src="images/inter/g-2.jpg"
-										alt="Фрагмент нашей студии">
+							<div class="interior__slider swiper" data-interior-slider>
+								<div class="interior__slider-wrapper swiper-wrapper">
+									<div class="interior__slide swiper-slide">
+										<div class="interior__compare" data-compare-slider style="--compare-position: 50%;">
+											<div class="interior__layer interior__layer_base">
+												<img class="interior__bg" src="images/inter/02.webp" alt="Наша студия">
+												<h3 class="interior__label interior__label_right">Наша</h3>
+												<img class="interior__decor interior__decor_right" src="images/inter/g-2.jpg" alt="Фрагмент нашей студии">
+											</div>
+
+											<div class="interior__layer interior__layer_overlay" aria-hidden="true">
+												<img class="interior__bg" src="images/inter/01.webp" alt="Другие студии">
+												<h3 class="interior__label interior__label_left">Другие студии</h3>
+												<img class="interior__decor interior__decor_left" src="images/inter/g-1.jpg" alt="Фрагмент другой студии">
+											</div>
+
+											<button class="interior__handle" type="button" aria-label="Сравнить интерьеры" data-compare-handle>
+												<span class="interior__handle-line" aria-hidden="true"></span>
+												<span class="interior__handle-knob" aria-hidden="true"><span></span></span>
+											</button>
+
+										</div>
+									</div>
+
+									<div class="interior__slide swiper-slide">
+										<div class="interior__compare" data-compare-slider style="--compare-position: 55%;">
+											<div class="interior__layer interior__layer_base">
+												<img class="interior__bg" src="images/inter/02.jpg" alt="Наша студия — второй интерьер">
+												<h3 class="interior__label interior__label_right">Наша</h3>
+												<img class="interior__decor interior__decor_right" src="images/inter/g-1.jpg" alt="Фрагмент нашей студии">
+											</div>
+
+											<div class="interior__layer interior__layer_overlay" aria-hidden="true">
+												<img class="interior__bg" src="images/inter/01.jpg" alt="Другие студии — второй интерьер">
+												<h3 class="interior__label interior__label_left">Другие студии</h3>
+												<img class="interior__decor interior__decor_left" src="images/inter/g-2.jpg" alt="Фрагмент другой студии">
+											</div>
+
+											<button class="interior__handle" type="button" aria-label="Сравнить интерьеры" data-compare-handle>
+												<span class="interior__handle-line" aria-hidden="true"></span>
+												<span class="interior__handle-knob" aria-hidden="true"><span></span></span>
+											</button>
+
+										</div>
+									</div>
 								</div>
-
-								<div class="interior__layer interior__layer_overlay" aria-hidden="true">
-									<img class="interior__bg" src="images/inter/01.webp" alt="Другие студии">
-									<h3 class="interior__label interior__label_left">Другие студии</h3>
-									<img class="interior__decor interior__decor_left" src="images/inter/g-1.jpg"
-										alt="Фрагмент другой студии">
-								</div>
-
-								<button class="interior__handle" type="button" aria-label="Сравнить интерьеры"
-									data-compare-handle>
-									<span class="interior__handle-line" aria-hidden="true"></span>
-									<span class="interior__handle-knob" aria-hidden="true">
-										<span></span>
-									</span>
-								</button>
-
-								<img src="images/arrow/cursor.png" alt="icon: cursor" class="interior__cursor">
 							</div>
 						</div>
-						<div data-da=".interior__footer-block, 991.98, last" class="interior__navigation-image">
-							<img src="images/inter/right-icon.png" alt="image">
-						</div>
+						<button data-da=".interior__footer-block, 991.98, last" class="interior__navigation-image interior__nav interior__nav_next" type="button" aria-label="Следующий интерьер">
+							<img src="images/inter/right-icon.png" alt="">
+						</button>
 						<div class="interior__footer-block"></div>
 					</div>
 				</div>
@@ -1139,6 +1162,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script defer src="js/main.js"></script>
 </body>
 
